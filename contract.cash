@@ -1,0 +1,22 @@
+pragma cashscript ^0.7.0;
+
+contract Giveaway() {
+
+    function payout(
+        bytes   message,
+        datasig signature,
+    ) {
+        pubkey oraclePublicKey = pubkey(0x02d3c1de9d4bc77d6c3608cbe44d10138c7488e592dc2b1e10a6cf0e92c2ecb047);
+        // Verify that the message is signed by the oracle.
+        require(checkDataSig(signature, message, oraclePublicKey));
+
+        // Assert that it's not OLD message
+        int sequence = int(message.split(8)[1].split(4)[0]);
+        require(sequence > 94000);
+
+        int oraclePrice = int(message.split(12)[1]);
+
+        // Price is in dollar cents. So 120 USD is 12000.
+        require(oraclePrice > 25000);
+    }
+}
