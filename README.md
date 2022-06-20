@@ -12,6 +12,11 @@ Use at own risk.
 
 ### Usage
 
+**At the time of writing, this contract has 1 BCH in it. It will be redeemable
+if price of BCH goes to $250**
+
+View the balance in [bitcoincash:pzttkv52fwrkj4ds5w8apkne4vnk3cw0c5xuvh2lyv](https://explorer.bitcoinunlimited.info/address/bitcoincash:pzttkv52fwrkj4ds5w8apkne4vnk3cw0c5xuvh2lyv)
+
 Open `giveaway.py`, update values in `REDEEM_ADDRESS` and `UNLOCKING_SCRIPT`.
 
 Oracle message and signature for the unlocking script can be found here:
