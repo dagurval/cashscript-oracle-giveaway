@@ -23,7 +23,7 @@ Oracle message and signature for the unlocking script can be found here:
 https://oracles.cash/oracles/02d3c1de9d4bc77d6c3608cbe44d10138c7488e592dc2b1e10a6cf0e92c2ecb047
 
 ```
-pip3 bitcoincash
+pip3 install bitcoincash
 python3 giveaway.py
 ```
 
